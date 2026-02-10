@@ -1,0 +1,4 @@
+.zed/
+out/
+mise.toml
+.clangd
