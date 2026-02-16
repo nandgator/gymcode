@@ -44,7 +44,7 @@ func searchInsert(nums []int, target int) int {
 	return left
 }
 
-func main() {
-	nums := []int{1, 3, 4, 5, 6}
-	println("Result", searchInsert(nums, 2))
-}
+// func main() {
+// 	nums := []int{1, 3, 4, 5, 6}
+// 	println("Result", searchInsert(nums, 2))
+// }
