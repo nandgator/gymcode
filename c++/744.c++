@@ -10,22 +10,17 @@ public:
         int right = letters.size() - 1;
         int lastGreaterValue = letters[0];
         int pointer = right - ((right - left) / 2);
-        bool isFound = false;
-        while (left <= right && !isFound) {
+        while (left <= right) {
             pointer = left + ((right - left) / 2);
-            if (letters[pointer] == target) {
-                isFound = true;
-            } else if (letters[pointer] < target) {
+            if (letters[pointer] <= target) {
                 left = pointer + 1;
-            } else {
+            }
+            else if (letters[pointer] > target) {
                 lastGreaterValue = letters[pointer];
-				right = pointer - 1;
+                right = pointer - 1;
+            }
         }
-        }
-        if (isFound) {
-            pointer += 1;
-        }
-        return letters[pointer];
+        return lastGreaterValue;
     }
 };
 
