@@ -114,4 +114,5 @@ int main() {
     free(grid[i]);
   }
   free(grid);
+  return 0;
 }
